@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "currency_converter_service"
+version = "0.1.0"
+description = ""
+authors = ["Anton Petrov <anton.petrov.swe@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^19.10b0"
+mypy = "^0.770"
+isort = "^4.3.21"
+flake8 = "^3.7.9"
+pytest-cov = "^2.8.1"
+pre-commit = "^2.2.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
