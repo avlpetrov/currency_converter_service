@@ -28,8 +28,7 @@ class CurrencyExchangeRatesStorage:
 
         currency_exchange_rate = None
         if serialized_rate:
-            deserialized_rate = json.loads(serialized_rate)
-            currency_exchange_rate = ExchangeRate(**deserialized_rate)
+            currency_exchange_rate = ExchangeRate(**json.loads(serialized_rate))
 
         return currency_exchange_rate
 
