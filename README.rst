@@ -2,6 +2,7 @@ Currency Converter Service
 ==========================
 Installation
 ------------
+This kind of installation is for development purpose only.
 Install dependencies locally using ``poetry`` and ``make``: ::
 
     git clone https://github.com/avlpetrov/currency_converter_service
