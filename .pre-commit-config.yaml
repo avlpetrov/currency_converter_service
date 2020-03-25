@@ -19,7 +19,7 @@ repos:
       name: flake8
       stages: [commit]
       language: system
-      entry: poetry run flake8
+      entry: poetry run flake8 --max-line-length 88
       types: [python]
 
     - id: mypy
