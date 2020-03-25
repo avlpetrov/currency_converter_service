@@ -53,7 +53,7 @@ async def test_client_loads_exchange_rates(database: Redis) -> None:
         )
 
     expected_usd_exchange_rates = {
-        b"RUB": json.dumps({"rate": "79.75", "last_updated": 1584989828}).encode(),
+        "RUB": json.dumps({"rate": "79.75", "last_updated": 1584989828}),
     }
 
     usd_exchange_rates = await database.hgetall("exchange-rates:USD")
@@ -90,8 +90,8 @@ async def test_client_merges_exchange_rates(database: Redis) -> None:
     usd_exchange_rates = await database.hgetall("exchange-rates:USD")
 
     expected_usd_exchange_rates = {
-        b"RUB": json.dumps({"rate": "79.75", "last_updated": 1584989828}).encode(),
-        b"EUR": json.dumps({"rate": "0.920839", "last_updated": 1553178002}).encode(),
+        "RUB": json.dumps({"rate": "79.75", "last_updated": 1584989828}),
+        "EUR": json.dumps({"rate": "0.920839", "last_updated": 1553178002}),
     }
 
     assert usd_exchange_rates == expected_usd_exchange_rates

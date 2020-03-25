@@ -3,11 +3,7 @@ from decimal import Decimal
 from aioredis import Redis
 from fastapi import Depends, FastAPI, HTTPException, Query
 from starlette.responses import RedirectResponse
-from starlette.status import (
-    HTTP_201_CREATED,
-    HTTP_400_BAD_REQUEST,
-    HTTP_404_NOT_FOUND,
-)
+from starlette.status import HTTP_201_CREATED, HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND
 
 from currency_converter_service.config import APP_NAME, DATABASE_URI, DEBUG
 from currency_converter_service.currency import Currency

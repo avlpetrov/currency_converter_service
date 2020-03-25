@@ -49,9 +49,6 @@ class CurrencyExchangeRatesStorage:
         results = await transaction.execute(return_exceptions=True)
         succeeded = all(not isinstance(result, Exception) for result in results)
 
-        if not succeeded:
-            raise Exception("Something went wrong during transaction")
-
         return LoadStatus.SUCCESS if succeeded else LoadStatus.FAILURE
 
 

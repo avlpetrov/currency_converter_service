@@ -35,7 +35,7 @@ def redis_server(docker: dockerlib.APIClient):
 
 @pytest.fixture
 async def database():
-    connection = await aioredis.create_redis(REDIS_TEST_SERVER_URI)
+    connection = await aioredis.create_redis(REDIS_TEST_SERVER_URI, encoding="UTF-8")
 
     yield connection
     await connection.flushdb()
