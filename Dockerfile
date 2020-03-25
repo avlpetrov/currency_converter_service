@@ -15,4 +15,6 @@ RUN apk add --no-cache --virtual .build-deps gcc musl-dev libffi-dev libressl-de
 
 COPY . ./
 
-CMD uvicorn --host=0.0.0.0 currency_converter_service.main:app
+CMD gunicorn -b 0.0.0.0:8000 \
+    currency_converter_service.main:app \
+    -w 16 -k uvicorn.workers.UvicornWorker
