@@ -9,7 +9,7 @@ Install dependencies locally using ``poetry`` and ``make``: ::
     cd currency_converter_service
     make install
 
-Run  ``redis`` storage ::
+Run  ``redis`` storage: ::
 
     docker run --name dev-redis -d redis
 
@@ -23,10 +23,11 @@ Run app: ::
 
 API
 ----------
-API routes available on ``/docs`` or ``/redoc`` paths with Swagger or ReDoc
+API routes available on ``/docs`` or ``/redoc`` paths with Swagger or ReDoc.
 
 Deployment
 ----------------------
 Run app using ``docker`` and ``docker-compose``: ::
 
     docker-compose up
+
