@@ -29,5 +29,4 @@ Deployment
 ----------------------
 Run app using ``docker`` and ``docker-compose``: ::
 
-    docker-compose up -d db
-    docker-compose up -d app
+    docker-compose up
