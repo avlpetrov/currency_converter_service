@@ -94,7 +94,7 @@ async def load_currency_exchange_rates(
     merge: bool, currency_exchange_rates: CurrencyExchangeRatesLoadRequest
 ):
     status = await currency_exchange_rates_storage.load_exchange_rates(
-        loadable_exchange_rates=tuple(preprocess(currency_exchange_rates)), merge=merge
+        loadable_exchange_rates=preprocess(currency_exchange_rates), merge=merge
     )
 
     response = CurrencyExchangeLoadResponse(status=status, merge=merge)
