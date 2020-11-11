@@ -1,5 +1,7 @@
 Currency Converter Service
 ==========================
+Made for Mail.Ru Group as a test assignment.
+
 Installation
 ------------
 This kind of installation is for development purpose only.
